@@ -6,7 +6,9 @@ func main() {
 	fmt.Println("multiply")
 	multiply()
 	fmt.Println("\nreverse")
-	reverseString([]byte{'h', 'e', 'l', 'l', 'o'})
+	b := []byte{'f', 'a', 'i', 'z', 'u', 'l', 'l', 'a'}
+	reverseString(b)
+	fmt.Println(string(b))
 	fmt.Println("\nswap nodes in pairs")
 	makeSwap()
 }
