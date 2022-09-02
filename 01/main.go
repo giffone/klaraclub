@@ -76,17 +76,26 @@ func (tr *TreeNode) insert(value int) error {
 }
 
 func main() {
-	tr := &TreeNode{value: 8}
+	// tr := &TreeNode{value: 8}
 
-	for _, v := range []int{4, 2, 3, 10, 6, 7} {
-		tr.insert(v)
+	// for _, v := range []int{4, 2, 3, 10, 6, 7} {
+	// 	tr.insert(v)
+	// }
+	// fmt.Println("max is ", tr.findMax())
+	// fmt.Println("min is ", tr.findMin())
+	// tr.printInOrder()
+	// fmt.Println("\n-------")
+	// tr.delete(4)
+	// tr.printInOrder()
+
+	tr2 := &TreeNode{value: 4}
+	for _, v := range []int{2, 1, 3, 6, 5, 7} {
+		tr2.insert(v)
 	}
-	fmt.Println("max is ", tr.findMax())
-	fmt.Println("min is ", tr.findMin())
-	tr.printInOrder()
-	fmt.Println("\n-------")
-	tr.delete(4)
-	tr.printInOrder()
+	list := tr2.dfs(3)
+	for _, t := range list {
+		fmt.Printf("%d -> ", t.value)
+	}
 }
 
 func (tr *TreeNode) printInOrder() {
