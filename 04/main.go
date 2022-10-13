@@ -10,5 +10,11 @@ func main() {
 	reverseString(b)
 	fmt.Println(string(b))
 	fmt.Println("\nswap nodes in pairs")
-	makeSwap()
+	l := makeList()
+	swapPairs(l)
+	print(l)
+	fmt.Println("\nreverse linked list")
+	l = makeList()
+	l = reverseList(l)
+	print(l)
 }
